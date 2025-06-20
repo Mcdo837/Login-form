@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in form</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(black,black,rgb(0, 166, 221),rgb(214, 51, 51));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    .container{
+        position: relative;
+        background: transparent;
+        border-color: white;
+        border-style: solid;
+        border-width: 0.1px;
+        padding: 20px;
+        border-radius: 5px;
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        color: white;
+        font-size: 40px;
+        font-family: Helvetica;
+        text-align: center;
+    }
+    .input-box{
+        position: relative;
+        width: 310px;
+        margin: 30px 0;
+        border-bottom: 2px solid white;
+    }
+    .input-box label{
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 1em;
+        color:white;
+        pointer-events: none;
+        transition: 0.4s;
+        cursor: pointer;
+        padding: 0 35px 0 5px;
+    }
+    .input-box label:focus~label,
+    .input-box input:focus~label {
+        top:-5px;
+    }
+    .input-box input{
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border:none;
+      outline: none;
+      color: white;
+      font-size: 20px;
+    }
+    .icon{
+        color: white;
+        position: absolute;
+        right: 8px;
+        font-size: 20px;
+        line-height: 60px;
+    }
+        .h2-container{
+        border-bottom: solid 1px rgb(255, 0, 0);
+        border-top: solid 1px lightgreen;
+        border-left: solid 1px lightgreen;
+        border-right: solid 1px #f50202;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    .remeber-container{
+        font-size: 20px;
+        color: white;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+    button{
+        font-size:25px;
+        width: 100%;
+        padding: 7px;
+        border-radius:5px;
+        border-color:transparent;
+        margin-top:8px;
+        margin-bottom:8px;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+        font-family: Helvetica;
+    }
+    p{
+        font-size: 20px;
+    }
+    a{
+        text-decoration: none;
+        margin-left: 20px;
+        color: white;
+    }
+    </style>
+</head>
+<body>
+    
+   <div class="container">
+    <form action="#">
+        <div class="h2-container">
+         <h2>Login</h2>
+        </div>
+         <div class="input-box">
+            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+            <input type="email">
+            <label>Email</label>
+         </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></ion-icon></span>
+                <input type="password">
+                <label>Password</label>
+           </div>
+            <div class="remeber-container">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">forgot password</a>
+            </div>
+            <button>Login</button>
+            <p>dont have an account?<a href="#">Signup</a></p>
+    </form>
+   </div>
+
+
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
