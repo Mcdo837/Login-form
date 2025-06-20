@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email sender</title>
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "w4b8SBE-WPxbvodiw",
+      });
+   })();
+</script>
+<script>
+
+</script>
+</head>
+<body>
+    <div>
+      <form action="#" method="POST">
+        <div class="input-container">
+          <label for="name">Name:</label>
+          <input type="text" name="" placeholder="name" id="user_name" >
+        </div>
+        <div class="input-container">
+          <label for="Email">Email:</label>
+          <input type="email" id="user_Email">
+        </div>
+        <div class="input-container">
+          <label for="subject">Subject:</label>
+          <input type="text" id="User_subject" placeholder="write subjetct here">
+        </div>
+        <div class="input-container">
+          <label for="message">Message:</label>
+          <input type="text" id="User_message" placeholder="type message here!">
+        </div>
+        <button onclick="sendmail()">send</button>
+      </form>
+    </div>
+</body>
+</html>
